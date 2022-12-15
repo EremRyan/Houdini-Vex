@@ -1,4 +1,4 @@
-                               Vex Transfer Attribute
+                                          Vex Transfer Attribute
 //Today I will transfer one object attribute to other object.
 //In my case, I have one grid object and one point object. I want to send my point's normal attribute (N) to my grid object.
 // I am putting to way to here. 
