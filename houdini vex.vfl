@@ -4,11 +4,14 @@
 // I am putting to way to here. 
 
 //I assume my point object linked second input
+
 ```
 vector new_N = point(1,"N", 0);
 vector cross = cross(@N, new_N);
 ```
+
 // I assume point object did not link input
+
 ```
 vector new_N = point(("op:../{my point object node name}"), "N", 0);
 vector cross = cross(@N, new_N);
