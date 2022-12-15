@@ -19,3 +19,15 @@ vector cross = cross(@N, new_N);
 //Thank you.
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+```
+ <div>
+    <h1>Welcome to Confetti Party!</h1>
+     <p>Hello user, this website created to celebrate you.</p>
+     <h2>PLEASE ENJOY!</h2>
+     
+     <div>
+     <button id="confetti" class="pill">CONFETTI TRIGGER</button>
+     <button id="confetti" class="pill_1">FINISH IT</button>
+```
