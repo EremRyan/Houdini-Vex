@@ -26,3 +26,24 @@ int sum = a + b;
 printf(itoa(sum));
 
 // and after press the enter I can see the result on Houdini console.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// I was thinking scaling object with Vex instead of using transfer node and change scale parameters. First I used @pscale fonction but I could not get the result I expected.
+// After some research I find the solution with matrix3 and scale fonction. Big thanks to MATT ESTELA for sharing his large knowledge by Joy Of Vex series.
+
+// For polygon object
+
+matrix3 m = ident();
+scale(m, chv("scale"));
+@P *= m;
+
+// For primitive object
+
+matrix3 m = ident();
+scale(m,chv("scale"));
+setprimintrinsic(0, "transform", 0, m);
+
+// Here is the Joy Of Vex series link : (https://www.tokeru.com/cgwiki/index.php?title=JoyOfVex).
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
