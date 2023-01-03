@@ -25,4 +25,4 @@ int b = 8;
 int sum = a + b; 
 printf(itoa(sum));
 
-// and after press enter I can see the result on Houdini console.
+// and after press the enter I can see the result on Houdini console.
