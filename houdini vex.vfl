@@ -17,3 +17,12 @@ vector cross = cross(@N, new_N);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Today I will try simple math calculation with Vex and for the result I am going to use Houdini console.
+
+int a = 5;
+int b = 8;
+
+int sum = a + b; 
+printf(itoa(sum));
+
+// and after press enter I can see the result on Houdini console.
