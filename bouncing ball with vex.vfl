@@ -1,4 +1,49 @@
-```
-Today I will try to make bouncing ball with completely Vex. My aim is creating adjustable bouncing amounts, height and destination point in movement of natural look.
-First I have to say that, I very infulienced John Kunz's bouncing balls tutorial and I added and changed some parts of it to reach my goal.
-```
+
+//Today I will try to make bouncing ball with completely Vex. My aim is creating adjustable bouncing amounts, height and destination point in movement of natural look.
+//First I have to say that, I very infulienced John Kunz's bouncing balls tutorial and I added and changed some parts of it to reach my goal.
+
+//Let's begin.
+
+// OK, first we will create an add node to feed our wrangle attribute node and give a point. Then we are ready to coding stuff.
+
+float time = @Time;
+@P.x = time;
+
+// We created the time attribute and put it on x direction. This gave a pozitif X direction movement to our point.
+
+// Time to add some bouncing.
+
+int bounce = chi('bounce');
+float pi = chf('pi');
+@P.y = sin(time * pi * bounce);
+
+//Ps: bounce value is 3 and pi is 3.14.
+// We created a bouncing movement by sine wave. And time attribute feeds consistently our sin function.
+//  A small problem poped up, the point also goes in negative Y direction. For fix that we will use abs function and this will turn the values to positive.
+
+@P.y = abs(@P.y);
+ 
+// We have endless bouncing movement now. The bouncing should slowly end for natural look.
+// We will use exponential function and multiply our Y direction to create exponential decay.
+
+@P.y = sin(time * pi * bounce) * exp(time*time);
+
+// A little math. Now, the point is going up. We will lock the bouncing between one to zero unit.
+
+@P.y = sin(time * pi * bounce) * 1/(exp(time*time));
+
+// And we will use same technique for X direction to give stopping destination.
+
+@P.x = 1/exp(time*time);
+
+//The ball starts one unit ahead and goes one unit to the opposite site. For fix that, we subtract from one.
+
+@P.x = 1-(1/exp(time*time));
+
+// For more natural look add power function.
+
+@P.x = 1-(1/exp(pow(time*time,0.6)));
+
+
+
+
