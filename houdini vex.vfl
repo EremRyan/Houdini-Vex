@@ -50,3 +50,4 @@ setprimintrinsic(0, "transform", 0, m);
 
 //
 
+texture(map, s0, t0, s1, t1, s2, t2, s3, t3, ...)
